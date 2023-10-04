@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android" + totalTimeActive)
+                    Greeting( totalTimeActive)
 
                 }
             }
@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
 
     fun updateUI(){
         var minutos = ((totalTimeActive / 60000).toInt())
-        Toast.makeText(this, "El tiempo activo hasta ahora es de: ${totalTimeActive / 60000}min ${(totalTimeActive / 1000) - (60 * minutos)}s",Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "La aplicació ha estado activa hasta ahora: ${totalTimeActive / 60000}min ${(totalTimeActive / 1000) - (60 * minutos)}s",Toast.LENGTH_LONG).show()
     }
 
     override fun onResume() {
